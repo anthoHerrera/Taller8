@@ -1,6 +1,6 @@
 
 package patrones.behavioral;
-import patrones.creational.ComprobanteElectronico;
+import sinPatron.ComprobanteElectronico;
 
 /**
  *
