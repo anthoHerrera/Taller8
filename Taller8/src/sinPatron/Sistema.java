@@ -6,6 +6,10 @@
 package sinPatron;
 
 import java.util.Scanner;
+import patrones.behavioral.Context;
+import patrones.behavioral.EsquemaOffline;
+import patrones.behavioral.EsquemaOnline;
+import patrones.behavioral.Strategy;
 
 /**
  *
@@ -23,20 +27,36 @@ public class Sistema {
             System.out.println("4: Salir");
             System.out.println("Elija una opcion del menu");
             int i = sc.nextInt();
-            if(i ==1){
-                
-            }else if(i==2){
-                
-            }else if(i==3){
-                
-            }else if(i==4){
-                System.out.println("Gracias por su visita");
-                bandera=1;
-            }else{
-                System.out.println("Opcion incorrecta. Vuelve a intentar");
+            switch (i) {
+                case 1:
+                    ComprobanteElectronico f1 = new Factura();
+                    ComprobanteElectronico f = new 
+                    System.out.print(f1.);
+                    System.out.println("Tipo de esquema");
+                    System.out.println("1: Esquema Offline");
+                    System.out.println("2: Esquema Online");
+                    i=sc.nextInt();
+                    if(i==1){
+                        Strategy s = new EsquemaOffline();
+                        Context c = new Context(s);
+                    }else if(i==2){
+                        Strategy s = new EsquemaOnline();
+                        Context c = new Context(s);
+                    }
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    System.out.println("Gracias por su visita");
+                    bandera=1;
+                    break;
+                default:
+                    System.out.println("Opcion incorrecta. Vuelve a intentar");
+                    break;
             }
         }
-        Factura f1 = new Factura();
         
     }
 }

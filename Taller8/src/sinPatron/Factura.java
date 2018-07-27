@@ -61,4 +61,15 @@ public class Factura extends ComprobanteElectronico {
         this.total = total;
     }
 
+    @Override
+    public String toString() {
+        return "Factura:\n" 
+            + "Detalles del emisor: " + super.getDetallesDelEmisor() 
+            + "\nCliente: " + nombreCliente + "\nNumero de Autorizacion: " 
+            + super.getNumeroAutorizacion()+ "\nClave de acceso: " 
+            + super.getClaveAcceso()+ "\nCodigo:" + codigo + "\nFecha: " 
+            + super.getFecha()+ "\nProductos:" + productos + "\nTotal=" + total;
+    }
+    
+    
 }
