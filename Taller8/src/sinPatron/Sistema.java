@@ -17,6 +17,7 @@ import patrones.creational.FactoryFactura;
 import patrones.creational.FactoryGuiaRemision;
 import patrones.creational.FactoryNotaCredito;
 import patrones.structural.AgregarLema;
+import patrones.structural.AgregarLogo;
 import patrones.structural.ComprobanteElectronicoDecorator;
 
 /**
@@ -77,7 +78,16 @@ public class Sistema {
                         Context c = new Context(s);
                         c.establecerEsquema(factura);
                     }
+                    System.out.println("Agregar lema: ");
+                    String lema1 = sc.nextLine();
+                    lema1 = sc.nextLine();
+                    ComprobanteElectronicoDecorator dec2 = new AgregarLema(factura, lema1);
+                    System.out.println("Agregar logo: ");
+                    String logo1 = sc.nextLine();
+                    ComprobanteElectronicoDecorator d2 = new AgregarLogo(factura, logo1);
                     System.out.println(factura);
+                    System.out.println(dec2);
+                    System.out.println(d2);
                     break;
                 case 2:
                     
@@ -113,7 +123,17 @@ public class Sistema {
                         Context c = new Context(s);
                         c.establecerEsquema(guia);
                     }
+                     System.out.println("Agregar lema: ");
+                    String lema = sc.nextLine();
+                    lema = sc.nextLine();
+                    ComprobanteElectronicoDecorator dec = new AgregarLema(guia, lema);
+                    System.out.println("Agregar logo: ");
+                    String logo = sc.nextLine();
+                    ComprobanteElectronicoDecorator d = new AgregarLogo(guia, logo);
                     System.out.println(guia);
+                    System.out.println(dec);
+                    System.out.println(d);
+                    
                     break;
                 case 3:
                     
@@ -135,11 +155,7 @@ public class Sistema {
                     
                     ComprobanteElectronicoAbstractFactory f3 = new FactoryNotaCredito();
                     ComprobanteElectronico nota = f3.createComprobanteElectronico(nombreCliente,null,null,null,null,0,codigo,detalle,valor,detallesDelEmisor,numeroAutorizacion,claveAcceso,fecha.toString());
-//                    AgregarLema elec = (AgregarLema) factura;
-//                    System.out.println(elec.getComprobante());
-//                    Factura f = (Factura) factura;
-                    
-                    
+      
                     System.out.println("Tipo de esquema");
                     System.out.println("1: Esquema Offline");
                     System.out.println("2: Esquema Online");
@@ -153,7 +169,17 @@ public class Sistema {
                         Context c = new Context(s);
                         c.establecerEsquema(nota);
                     }
+                    
+                    System.out.println("Agregar lema: ");
+                    String lema3 = sc.nextLine();
+                    lema3 = sc.nextLine();
+                    ComprobanteElectronicoDecorator dec1 = new AgregarLema(nota, lema3);
+                    System.out.println("Agregar logo: ");
+                    String logo3 = sc.nextLine();
+                    ComprobanteElectronicoDecorator d1 = new AgregarLogo(nota, logo3);
                     System.out.println(nota);
+                    System.out.println(dec1);
+                    System.out.println(d1);
                     break;
                 case 4:
                     System.out.println("Gracias por su visita");

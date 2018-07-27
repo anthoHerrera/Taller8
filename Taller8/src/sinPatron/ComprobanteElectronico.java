@@ -11,10 +11,10 @@ package sinPatron;
  * @author Anthony777
  */
 public abstract class ComprobanteElectronico {
-    private String detallesDelEmisor;
-    private String numeroAutorizacion;
-    private String claveAcceso;
-    private String fecha;
+    protected String detallesDelEmisor;
+    protected String numeroAutorizacion;
+    protected String claveAcceso;
+    protected String fecha;
 
     public ComprobanteElectronico() {
     }

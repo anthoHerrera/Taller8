@@ -12,10 +12,20 @@ import sinPatron.ComprobanteElectronico;
  * @author User
  */
 public class AgregarLema extends ComprobanteElectronicoDecorator{
+    private String lema;
     
     public AgregarLema(ComprobanteElectronico comprobante, String lema) {
         super(comprobante);
-        super.setLema(lema);
+        this.lema=lema;
     }
+
+    public String getLema() {
+        return lema;
+    }
+
+    public void setLema(String lema) {
+        this.lema = lema;
+    }
+    
     
 }

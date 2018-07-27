@@ -13,9 +13,7 @@ import sinPatron.ComprobanteElectronico;
  */
 public abstract class ComprobanteElectronicoDecorator extends ComprobanteElectronico{
     
-    private String rutaALaImagen;
-    private String lema;
-    private ComprobanteElectronico comprobante;
+    protected ComprobanteElectronico comprobante;
 
     public ComprobanteElectronicoDecorator(ComprobanteElectronico comprobante) {
         this.comprobante = comprobante;
@@ -29,20 +27,4 @@ public abstract class ComprobanteElectronicoDecorator extends ComprobanteElectro
         this.comprobante = comprobante;
     }
 
-    public String getRutaALaImagen() {
-        return rutaALaImagen;
-    }
-
-    public void setRutaALaImagen(String rutaALaImagen) {
-        this.rutaALaImagen = rutaALaImagen;
-    }
-
-    public String getLema() {
-        return lema;
-    }
-
-    public void setLema(String lema) {
-        this.lema = lema;
-    }
-    
 }

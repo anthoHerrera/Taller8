@@ -12,10 +12,19 @@ import sinPatron.ComprobanteElectronico;
  * @author User
  */
 public class AgregarLogo extends ComprobanteElectronicoDecorator {
+    private String rutaALaImagen;
     
     public AgregarLogo(ComprobanteElectronico comprobante, String direccionLogo) {
         super(comprobante);
-        super.setRutaALaImagen(direccionLogo);
+        rutaALaImagen=direccionLogo;
+    }
+
+    public String getRutaALaImagen() {
+        return rutaALaImagen;
+    }
+
+    public void setRutaALaImagen(String rutaALaImagen) {
+        this.rutaALaImagen = rutaALaImagen;
     }
     
     
