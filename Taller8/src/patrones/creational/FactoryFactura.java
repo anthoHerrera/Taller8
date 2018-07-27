@@ -5,6 +5,7 @@
  */
 package patrones.creational;
 
+import java.util.ArrayList;
 import sinPatron.ComprobanteElectronico;
 import sinPatron.Factura;
 
@@ -15,9 +16,9 @@ import sinPatron.Factura;
 public class FactoryFactura extends ComprobanteElectronicoAbstractFactory{
 
     @Override
-    public ComprobanteElectronico createComprobanteElectronico() {
+    public ComprobanteElectronico createComprobanteElectronico(String nombreCliente, String codigo, String destino, String placaVehiculo, ArrayList<String> productos, int total, String codigoComprobanteModificar, String detalleModificacion, float valorAPagar, String detallesDelEmisor, String numeroAutorizacion, String claveAcceso, String fecha) {
         System.out.println("factura");// es para probar el print
-        return new Factura();
+        return new Factura(nombreCliente,codigo,productos,total,detallesDelEmisor,numeroAutorizacion,claveAcceso,fecha);
     }
-    
+
 }

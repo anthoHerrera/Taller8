@@ -5,6 +5,7 @@
  */
 package patrones.creational;
 
+import java.util.ArrayList;
 import sinPatron.ComprobanteElectronico;
 import sinPatron.NotaCredito;
 
@@ -15,9 +16,11 @@ import sinPatron.NotaCredito;
 public class FactoryNotaCredito extends ComprobanteElectronicoAbstractFactory{
 
     @Override
-    public ComprobanteElectronico createComprobanteElectronico() {
+    public ComprobanteElectronico createComprobanteElectronico(String nombreCliente, String codigo, String destino, String placaVehiculo, ArrayList<String> productos, int total, String codigoComprobanteModificar, String detalleModificacion, float valorAPagar, String detallesDelEmisor, String numeroAutorizacion, String claveAcceso, String fecha) {
         System.out.println("notacredito");//es para probar el print
-        return new NotaCredito();
+        return new NotaCredito(nombreCliente,codigoComprobanteModificar,detalleModificacion,valorAPagar,detallesDelEmisor,numeroAutorizacion,claveAcceso,fecha);
     }
+
+    
     
 }

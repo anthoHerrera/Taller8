@@ -57,7 +57,7 @@ public class GuiaRemision extends ComprobanteElectronico{
             + "Detalles del emisor: " + super.getDetallesDelEmisor() 
             + "\nNumero de Autorizacion: " + super.getNumeroAutorizacion()
             + "\nClave de acceso: " + super.getClaveAcceso()
-            + "\nFecha: " + super.getFecha()+ "\nDestino:" + destino 
+            + "\nFecha: " + super.getFecha()+ "\nDestino: " + destino 
             + "\nPlaca del Vehiculo de transporte: " + placaVehiculo + "\nProductos: " + productos;
     }
     

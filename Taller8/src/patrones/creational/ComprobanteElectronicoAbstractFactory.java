@@ -5,6 +5,7 @@
  */
 package patrones.creational;
 
+import java.util.ArrayList;
 import sinPatron.ComprobanteElectronico;
 
 /**
@@ -13,5 +14,5 @@ import sinPatron.ComprobanteElectronico;
  */
 public abstract class ComprobanteElectronicoAbstractFactory {
     
-    public abstract ComprobanteElectronico createComprobanteElectronico();
+    public abstract ComprobanteElectronico createComprobanteElectronico(String nombreCliente, String codigo, String destino, String placaVehiculo, ArrayList<String> productos,int total,String codigoComprobanteModificar,String detalleModificacion, float valorAPagar, String detallesDelEmisor, String numeroAutorizacion, String claveAcceso, String fecha);
 }

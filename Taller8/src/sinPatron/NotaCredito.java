@@ -65,10 +65,10 @@ public class NotaCredito extends ComprobanteElectronico{
             + "Detalles del emisor: " + super.getDetallesDelEmisor() 
             + "\nNumero de Autorizacion: " + super.getNumeroAutorizacion()
             + "\nClave de acceso: " + super.getClaveAcceso() 
-            + "Cliente:" + nombreCliente + "\nCodigo de Comprobante a Modificar: " 
+            + "\nCliente: " + nombreCliente + "\nCodigo de Comprobante a Modificar: " 
             + codigoComprobanteModificar 
             + "\nFecha: " + super.getFecha() + "\nDetalle de Modificacion: " 
-            + detalleModificacion + "\nValor a pagar:" + valorAPagar;
+            + detalleModificacion + "\nValor a pagar: " + valorAPagar;
     }
     
 }
