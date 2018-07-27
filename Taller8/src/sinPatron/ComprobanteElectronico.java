@@ -57,5 +57,5 @@ public abstract class ComprobanteElectronico {
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
-
+   
 }

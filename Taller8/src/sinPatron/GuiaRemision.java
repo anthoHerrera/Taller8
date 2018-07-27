@@ -50,5 +50,15 @@ public class GuiaRemision extends ComprobanteElectronico{
     public void setProductos(ArrayList<String> productos) {
         this.productos = productos;
     }
+
+    @Override
+    public String toString() {
+        return "Guia de Remision:\n" 
+            + "Detalles del emisor: " + super.getDetallesDelEmisor() 
+            + "\nNumero de Autorizacion: " + super.getNumeroAutorizacion()
+            + "\nClave de acceso: " + super.getClaveAcceso()
+            + "\nFecha: " + super.getFecha()+ "\nDestino:" + destino 
+            + "\nPlaca del Vehiculo de transporte: " + placaVehiculo + "\nProductos: " + productos;
+    }
     
 }
