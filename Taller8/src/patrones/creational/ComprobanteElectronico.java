@@ -9,43 +9,23 @@ package patrones.creational;
  *
  * @author User
  */
-public class ComprobanteElectronico {
-    private String detallesDelEmisor;
-    private String numeroAutorizacion;
-    private String claveAcceso;
-    private String fecha;
+public interface ComprobanteElectronico {
+    
+    public String getDetallesDelEmisor();
 
-    public String getDetallesDelEmisor() {
-        return detallesDelEmisor;
-    }
+    public void setDetallesDelEmisor(String detallesDelEmisor);
+	
+    public String getNumeroAutorizacion();
 
-    public void setDetallesDelEmisor(String detallesDelEmisor) {
-        this.detallesDelEmisor = detallesDelEmisor;
-    }
+    public void setNumeroAutorizacion(String numeroAutorizacion);
 
-    public String getNumeroAutorizacion() {
-        return numeroAutorizacion;
-    }
+    public String getClaveAcceso();
 
-    public void setNumeroAutorizacion(String numeroAutorizacion) {
-        this.numeroAutorizacion = numeroAutorizacion;
-    }
+    public void setClaveAcceso(String claveAcceso);
 
-    public String getClaveAcceso() {
-        return claveAcceso;
-    }
+    public String getFecha();
 
-    public void setClaveAcceso(String claveAcceso) {
-        this.claveAcceso = claveAcceso;
-    }
-
-    public String getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
+    public void setFecha(String fecha);
     
     
 }
