@@ -10,6 +10,8 @@ import patrones.behavioral.Context;
 import patrones.behavioral.EsquemaOffline;
 import patrones.behavioral.EsquemaOnline;
 import patrones.behavioral.Strategy;
+import patrones.creational.ComprobanteElectronicoAbstractFactory;
+import patrones.creational.FactoryFactura;
 
 /**
  *
@@ -29,9 +31,12 @@ public class Sistema {
             int i = sc.nextInt();
             switch (i) {
                 case 1:
-                    ComprobanteElectronico f1 = new Factura();
-                    ComprobanteElectronico f = new 
-                    System.out.print(f1.);
+                    
+                    ComprobanteElectronicoAbstractFactory f1 = new FactoryFactura();
+                    ComprobanteElectronico factura = f1.createComprobanteElectronico();
+    
+                    Factura f = (Factura) factura;
+                    
                     System.out.println("Tipo de esquema");
                     System.out.println("1: Esquema Offline");
                     System.out.println("2: Esquema Online");
